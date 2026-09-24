@@ -1,0 +1,372 @@
+/* Paleta Laranja Shopee combinada com Marrom Doceria */
+:root {
+    --shopee-orange: #ee4d2d;
+    --shopee-dark-orange: #d33b1f;
+    --bg-light: #f5f5f5;
+    --text-color: #333333;
+    --white: #ffffff;
+    --font-family: 'Montserrat', sans-serif;
+    --brown-title: #5c3a21; /* Cor marrom do seu panfleto original */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+body {
+    background-color: var(--bg-light);
+    color: var(--text-color);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* --- ESTILO HEADER SHOPEE --- */
+.shopee-header {
+    background: linear-gradient(-180deg, var(--shopee-orange), #f53d2d);
+    color: var(--white);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Barra do Topo */
+.top-bar {
+    font-size: 12px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.top-bar-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.top-bar-left, .top-bar-right {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.top-bar-left a {
+    color: white;
+    font-size: 14px;
+    transition: opacity 0.2s;
+}
+
+.top-bar-left a:hover {
+    opacity: 0.8;
+}
+
+.separator {
+    opacity: 0.4;
+}
+
+.text-bold {
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Barra Principal */
+.main-header {
+    padding: 16px 0;
+}
+
+.main-header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    gap: 30px;
+}
+
+/* --- LOGO E MASCOTE T-REX --- */
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 28px;
+    font-weight: 700;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.logo-mascote {
+    height: 150px; 
+    width: 150px;
+    object-fit: contain;
+    filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.15)); /* Leve sombra para destacar no fundo vermelho */
+}
+
+.logo-sub {
+    font-weight: 300;
+    background: white;
+    color: var(--shopee-orange);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 4px;
+}
+
+/* Caixa de Busca */
+.search-box {
+    flex: 1;
+    max-width: 700px;
+    background: var(--white);
+    border-radius: 4px;
+    padding: 4px;
+    display: flex;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.search-box input {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+.search-btn {
+    background-color: var(--shopee-orange);
+    border: none;
+    color: white;
+    width: 60px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.2s;
+}
+
+.search-btn:hover {
+    background-color: var(--shopee-dark-orange);
+}
+
+/* Ícone do Carrinho no Topo */
+.cart-icon-container {
+    position: relative;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.header-cart-icon {
+    font-size: 26px;
+    color: var(--white);
+}
+
+.header-cart-badge {
+    position: absolute;
+    top: 0;
+    right: -2px;
+    background-color: var(--white);
+    color: var(--shopee-orange);
+    font-size: 12px;
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 2px 7px;
+    border: 1px solid var(--shopee-orange);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* --- BANNER DE BOAS VINDAS --- */
+.welcome-banner {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+.welcome-banner h2 {
+    font-size: 38px;
+    color: var(--brown-title);
+    font-weight: 700;
+}
+
+/* --- SEÇÕES E PRODUTOS --- */
+.container {
+    max-width: 1200px;
+    margin: 20px auto 60px;
+    padding: 0 20px;
+}
+
+.menu-section {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    margin-bottom: 40px;
+    box-shadow: 0 1px 20px rgba(0,0,0,0.02);
+}
+
+.section-title {
+    font-size: 24px;
+    color: var(--brown-title);
+    font-weight: 700;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #f2f2f2;
+    padding-bottom: 10px;
+}
+
+.subtitle-sabores {
+    font-size: 16px;
+    color: var(--brown-title);
+    opacity: 0.8;
+    margin-left: 5px;
+}
+
+.grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card-produto {
+    background: var(--white);
+    border: 1px solid #eef2f5;
+    border-radius: 6px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card-produto:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.card-info h3 {
+    font-size: 16px;
+    color: #4a2c11;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.card-produto .preco {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--shopee-orange);
+    margin-bottom: 15px;
+}
+
+.btn-adicionar {
+    background-color: rgba(238, 77, 45, 0.1);
+    color: var(--shopee-orange);
+    border: 1px solid var(--shopee-orange);
+    padding: 10px;
+    border-radius: 4px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.2s;
+}
+
+.btn-adicionar:hover {
+    background-color: var(--shopee-orange);
+    color: var(--white);
+}
+
+/* --- MODAL DO CARRINHO --- */
+.cart-modal {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 200;
+}
+
+.cart-modal-content {
+    background: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 500px;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.cart-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+}
+
+.close-modal {
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #aaa;
+    cursor: pointer;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.cart-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-qtd {
+    background: #eee;
+    border: none;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.cart-total-modal {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 700;
+    margin: 20px 0;
+}
+
+.btn-finalizar {
+    background-color: #25d366;
+    color: white;
+    border: none;
+    width: 100%;
+    padding: 14px;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-finalizar:hover {
+    background-color: #1ebd58;
+}
+
+/* --- AJUSTES DE CELULAR E DISPOSITIVOS MÓVEIS --- */
+@media (max-width: 768px) {
+    .top-bar { display: none; }
+    .main-header-container { gap: 15px; }
+    
+    .header-logo { font-size: 18px; gap: 8px; }
+    .logo-mascote { height: 35px; } /* Mascote menor em telas pequenas */
+    
+    .welcome-banner h2 { font-size: 28px; }
+}
