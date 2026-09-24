@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voltamos Com as Vendas!!! | Seus Doces Artesanais</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+
+    <header class="shopee-header">
+        <div class="top-bar">
+            <div class="top-bar-container">
+                <div class="top-bar-left">
+                    <span>Siga-nos no</span>
+                    <a href="https://www.instagram.com/yuri._.rex/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+                
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="main-header-container">
+                <!-- LOGO COM O MASCOTE T-REX -->
+                <div class="header-logo">
+                    <img src="./img/rex.png" alt="Rex Mascote" class="logo-mascote">
+					
+                    <span class="logo-text">Rex Doces E Salgados</span>
+                </div>
+
+                <div class="search-box">
+                    <input type="text" id="search-input" placeholder="Buscar na Doceria..." oninput="filtrarProdutos()">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+
+                <section id="Sobre" class="card">
+                    <h2> Sobre nossa Equipe </h2>
+                    <p>Estudantes do Senai</p>
+                </section>
+
+                <div class="cart-icon-container" onclick="abrirModal()">
+                    <i class="fas fa-shopping-cart header-cart-icon"></i>
+                    <span class="header-cart-badge" id="header-cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="welcome-banner">
+        <h2>Voltamos Com as Vendas!!!</h2>
+    </div>
+
+    <main>
+        <section class="menu-section" id="secao-alfajor">
+            <h2 class="section-title">ALFAJOR <span class="subtitle-sabores">*SABORES</span></h2>
+            
+            <div class="grid-produtos">
+                <!-- Produto 1 -->
+                <div class="card-produto" data-nome="alfajor aguila blanco">
+                    <div class="produto-imagem">
+                        <img src="./img/img01.png" alt="Produto 1">
+                    </div>
+                    <div class="card-info">
+                        <h3>AGUILA BLANCO</h3>
+                        <p class="preco">R$ 9,00</p>
+                    </div>
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Alfajor - Aguila Blanco', 8.50)">Adicionar ao Carrinho</button>
+                </div>
+                
+                <!-- Produto 2 -->
+                <div class="card-produto" data-nome="alfajor aguila brownie">
+                    <div class="produto-imagem">
+                        <img src="./img/img04.png" alt="Produto 4">
+                    </div>
+                    <div class="card-info">
+                        <h3>AGUILA BROWNIE</h3>
+                        <p class="preco">R$ 9,00</p>
+                    </div>
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Alfajor - Aguila Brownie', 9.00)">Adicionar ao Carrinho</button>
+                </div>
+                
+                <!-- Produto 3 -->
+                <div class="card-produto" data-nome="alfajor aguila coco">
+                    <div class="produto-imagem">
+                        <img src="./img/img05.png" alt="Produto 5">
+                    </div>
+                    <div class="card-info">
+                        <h3>AGUILA COCO</h3>
+                        <p class="preco">R$ 9,00</p>
+                    </div>
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Alfajor - Aguila Coco', 9.00)">Adicionar ao Carrinho</button>
+                </div>
+                
+                <!-- Produto 4 -->
+                <div class="card-produto" data-nome="alfajor aguila clásica">
+                    <div class="produto-imagem">
+                        <img src="./img/img03.png" alt="Produto 3">
+                    </div>
+                    <div class="card-info">
+                        <h3>AGUILA CLÁSICA</h3>
+                        <p class="preco">R$ 9,00</p>
+                    </div>
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Alfajor - Aguila Clásica', 8.50)">Adicionar ao Carrinho</button>
+                </div>
+
+                <!-- Produto 5 --> 
+                <div class="card-produto" data-nome="alfajor aguila dark">
+                    <div class="produto-imagem">
+                        <img src="./img/img02.png" alt="Produto 2">
+                    </div>
+                    <div class="card-info">
+                        <h3>AGUILA DARK</h3>
+                        <p class="preco">R$ 9,00</p>
+                    </div>
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Alfajor - Aguila Dark', 8.50)">Adicionar ao Carrinho</button>
+                </div>
+                
+                <!-- Produto 6 -->
+                <div class="card-produto" data-nome="alfajor aguila frutos rojos">
+                    <div class="produto-imagem">
+                        <img src="./img/img06.png" alt="Produto 6">
+                    </div>
+                    <div class="card-info">
+                        <h3>AGUILA FRUTOS ROJOS</h3>
+                        <p class="preco">R$ 9,00</p>
+                    </div>
+                    <button class="btn-adicionar" onclick="adicionarAoCarrinho('Alfajor - Aguila Frutos Rojos', 9.00)">Adicionar ao Carrinho</button>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-modal-content">
+            <div class="cart-modal-header">
+                <h2>Seu Carrinho</h2>
+                <button class="close-modal" onclick="fecharModal()">&times;</button>
+            </div>
+            
+            <div class="cart-items-wrapper" id="cart-items-container"></div>
+
+            <div class="cart-total-modal" id="modal-total">
+                <span>Total:</span>
+                <span>R$ 0,00</span>
+            </div>
+
+            <button class="btn-finalizar" onclick="enviarPedidoWhatsApp()">
+                Finalizar Pedido via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <script src="js/estoque.js"></script>
+</body>
+</html>
